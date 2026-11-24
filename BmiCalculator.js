@@ -1,19 +1,11 @@
-const prompt = require('prompt-sync')();
-let weight = Number(prompt("Enter weight in pounds : "));
-let height= Number(prompt("Enter heigth in Inches: "));
+const prompt = require("prompt-sync")();
+let weight= prompt("Enter weight: ");
+let height= prompt("Enter height: ");
 
-let BMI = ((weight *703 ) / (height *height));
-if (BMI >= 25){
-	console.log("Overweigth");
+let BMI = ((703* weight) / (height *height));
+if (BMI > 25 ){
+    console.log("overweight");
 }
-else if (BMI > 18.5 ){
-	console.log("Healthy weight");
-}
-else{
-	console.log("Underweight");
-}
-	
-	
 
+console.log(typeof (weight));
 
-console.log(BMI);
